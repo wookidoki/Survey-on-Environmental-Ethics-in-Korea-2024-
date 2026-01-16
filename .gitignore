@@ -1,0 +1,33 @@
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Excel temporary files
+~$*.xlsx
+
+# Data files (optional - large files)
+# 2024data/*.xlsx
+# 2024data/*.sav
+
+# Analysis output (keep only final JSON)
+# Keep: full_report_data.json
