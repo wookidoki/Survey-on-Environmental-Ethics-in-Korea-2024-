@@ -1,7 +1,7 @@
 let reportData = null;
 
 // 데이터 로드 및 초기화
-fetch("full_report_data.json")
+fetch("./full_report_data.json")
   .then((response) => response.json())
   .then((data) => {
     reportData = data;
