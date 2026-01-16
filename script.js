@@ -81,21 +81,7 @@ function renderItemAudit(itemAudit) {
   const labels = itemIds.map((id) => items[id].label);
   const means = itemIds.map((id) => items[id].mean);
 
-  // 색상 설정: 사용된 12개 문항은 파란색, B4_9/B4_10은 회색
-  const b4_used = [
-    "B4_1",
-    "B4_2",
-    "B4_3",
-    "B4_4",
-    "B4_5",
-    "B4_6",
-    "B4_7",
-    "B4_8",
-    "B4_11",
-    "B4_12",
-    "B4_13",
-    "B4_14",
-  ];
+
   const backgroundColors = itemIds.map((id) =>
     b4_used.includes(id) ? "#667eea" : "#95a5a6"
   );
