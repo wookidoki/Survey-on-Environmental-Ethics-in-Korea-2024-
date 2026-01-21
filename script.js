@@ -75,12 +75,17 @@ function renderItemAudit(itemAudit) {
   document.getElementById("ceiling-threshold").textContent =
     itemAudit.threshold.toFixed(2);
 
+  // 분석에 사용된 12개 문항
+  const b4_used = [
+    "B4_1", "B4_2", "B4_3", "B4_4", "B4_5", "B4_6", "B4_7", "B4_8",
+    "B4_11", "B4_12", "B4_13", "B4_14",
+  ];
+
   // 차트 데이터 준비
   const items = itemAudit.items;
   const itemIds = Object.keys(items).sort();
   const labels = itemIds.map((id) => items[id].label);
   const means = itemIds.map((id) => items[id].mean);
-
 
   const backgroundColors = itemIds.map((id) =>
     b4_used.includes(id) ? "#667eea" : "#95a5a6"
@@ -146,20 +151,6 @@ function renderItemAudit(itemAudit) {
 
   // 테이블 렌더링
   const table = document.querySelector("#item-audit-table tbody");
-  const b4_used = [
-    "B4_1",
-    "B4_2",
-    "B4_3",
-    "B4_4",
-    "B4_5",
-    "B4_6",
-    "B4_7",
-    "B4_8",
-    "B4_11",
-    "B4_12",
-    "B4_13",
-    "B4_14",
-  ]; // 실제 분석에 사용된 12개 문항
 
   itemIds.forEach((itemId) => {
     const item = items[itemId];
